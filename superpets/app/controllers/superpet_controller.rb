@@ -28,7 +28,7 @@ class SuperpetController < ApplicationController
   end
 
   def show
-
+    @superpet = Superpet.find_by_id(params[:id])
   end
 
   def edit
