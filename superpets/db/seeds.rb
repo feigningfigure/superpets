@@ -4,7 +4,7 @@ superpowers = ["heat-vision", "fire-breath", "slow-motion kung fu", "kung fu gri
 
 Superpet.delete_all
 
-25.times do
+15.times do
   new_superpet = Superpet.create({
     name: Faker::Name.first_name,
     kind: animals.sample,

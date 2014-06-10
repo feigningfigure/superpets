@@ -12,13 +12,19 @@ class SuperpetsController < ApplicationController
   #     format.json { render json: new_superpet }
   end
 
+  def create
+    pet_hash = params[:superpet]
+    pet = Superpet.new
+    pet.name = pet_hash[:name]
+    pet.kind =  pet_hash[:kind]
+    pet.superpower = pet_hash[:superpower]
+    pet.strength = pet_hash[:strength].to_i
+    pet.save
+    redirect_to '/'
+  end
+
   def update
-    @superpet = Superpet.find(params[:id])
-    if @superpet.update_attributes(params[:superpet])
-      redirect_to :action => 'show', :id => @superpet
-    else
-      render :action => 'edit'
-    end
+    
   end
 
   def destroy
@@ -32,7 +38,12 @@ class SuperpetsController < ApplicationController
   end
 
   def edit
-
+    @superpet = Superpet.find(params[:id])
+    if @superpet.update_attributes(params[:superpet])
+      redirect_to :action => 'show', :id => @superpet
+    else
+      render :action => 'edit'
+    end
   end
 
     private

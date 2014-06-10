@@ -1,0 +1,22 @@
+<h3> New Superpet </h3>
+<%= form_for superpet do |f| %>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :superpower %><br>
+    <%= f.text_field :superpower %>
+  </div>
+    <div class="field">
+    <%= f.label :kind %><br>
+    <%= f.text_field :kind %>
+  </div>
+    <div class="field">
+    <%= f.label :strength %><br>
+    <%= f.text_field :strength %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

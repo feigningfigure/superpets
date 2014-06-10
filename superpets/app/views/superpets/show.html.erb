@@ -4,4 +4,5 @@
 <p>Superpet #<%= @superpet.id %></p>
 <h3>Class: <%= @superpet.kind %></h3>
 <h3>Power: Level <%= @superpet.strength %> <%= @superpet.superpower %></h3>
+<h4>Update <%= link_to @superpet.name, "/superpets/#{@superpet.id}/edit" %></h4>
 
