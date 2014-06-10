@@ -4,7 +4,7 @@ class SuperpetsController < ApplicationController
     @superpets = Superpet.all
   end
 
-  def create
+  def new
     @superpet = Superpet.new
   #   new_superpet = Superpet.create({name: params["name"], superpower: params["superpower"]})
   #   respond_to do |format|
