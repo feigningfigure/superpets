@@ -1,4 +1,4 @@
-class SuperpetController < ApplicationController
+class SuperpetsController < ApplicationController
 
   def index
     @superpets = Superpet.all
