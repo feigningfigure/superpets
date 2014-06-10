@@ -1,19 +1,21 @@
-<div class="field">
-  <%= f.label :name %><br>
-  <%= f.text_field :name %>
-</div>
-<div class="field">
-  <%= f.label :superpower %><br>
-  <%= f.date_select :superpower %>
-</div>
+<%= form_for(@superpet) do |f| %>
   <div class="field">
-  <%= f.label :type %><br>
-  <%= f.date_select :type %>
-</div>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
   <div class="field">
-  <%= f.label :strength %><br>
-  <%= f.date_select :strength %>
-</div>
-<div class="actions">
-  <%= f.submit %>
-</div>
+    <%= f.label :superpower %><br>
+    <%= f.date_select :superpower %>
+  </div>
+    <div class="field">
+    <%= f.label :type %><br>
+    <%= f.date_select :type %>
+  </div>
+    <div class="field">
+    <%= f.label :strength %><br>
+    <%= f.date_select :strength %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
