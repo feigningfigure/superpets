@@ -1,7 +1,7 @@
 class SuperpetController < ApplicationController
 
   def index
-
+    @superpets = Superpet.all
   end
 
   def create
@@ -13,7 +13,9 @@ class SuperpetController < ApplicationController
   end
 
   def destroy
-
+    @superpet = Superpet.find(params[:superpet_id])
+    @superpet.destroy
+    redirect_to root_path
   end
 
   def show

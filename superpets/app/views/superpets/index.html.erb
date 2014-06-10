@@ -1,0 +1,22 @@
+
+<div class="superpet_bio">
+    <div class="info">
+      <h2 class="superpet_name">
+      <%= @superpet.name %>
+    </h2>
+    <h4 class="superpet_superpower">
+      Power: <%= @superpet.superpower %>
+    </h4>
+    <h4 class="superpet_type">
+      Type: <%= @superpet.type %>
+    </h4>
+    <h4 class="superpet_type">
+      Type: <%= @superpet.type %>
+    </h4>
+    <h4 class="superpet_strength">
+      Type: <%= @superpet.strength %>
+    </h4>
+    </div>
+    <%= link_to 'Destroy', superpet_path(@superpet),
+            :confirm => 'Are you sure?', :method => :delete %>
+</div>
